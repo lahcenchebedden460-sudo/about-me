@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cyber Luffy - Cyber Security Enthusiast, Security Researcher, Ethical Hacker from Algeria. Securing The Digital Future." />
+  <meta name="keywords" content="cybersecurity, ethical hacker, penetration testing, OSINT, security researcher, Algeria" />
+  <meta name="author" content="Cyber Luffy" />
+  <meta property="og:title" content="Cyber Luffy | Securing The Digital Future" />
+  <meta property="og:description" content="Cyber Security Enthusiast & Security Researcher from Algeria" />
+  <meta property="og:type" content="website" />
+  <title>Cyber Luffy | Cyber Security Expert</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== LOADER ========== -->
+  <div id="loader" class="loader" aria-label="Loading Cyber Luffy">
+    <canvas id="loader-matrix" class="loader-matrix"></canvas>
+    <div class="loader-content">
+      <div class="loader-wolf">
+        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="wolf-svg">
+          <polygon points="60,5 75,30 95,20 85,45 110,50 90,65 100,90 75,80 70,110 60,85 50,110 45,80 20,90 30,65 10,50 35,45 25,20 45,30" fill="none" stroke="#00ff41" stroke-width="1.5" opacity="0.3"/>
+          <ellipse cx="60" cy="55" rx="28" ry="24" fill="none" stroke="#00ff41" stroke-width="1.5"/>
+          <polygon points="46,35 38,15 55,32" fill="#00ff41" opacity="0.8"/>
+          <polygon points="74,35 82,15 65,32" fill="#00ff41" opacity="0.8"/>
+          <ellipse cx="50" cy="52" rx="5" ry="6" fill="#0080ff" opacity="0.9"/>
+          <ellipse cx="70" cy="52" rx="5" ry="6" fill="#0080ff" opacity="0.9"/>
+          <ellipse cx="50" cy="53" rx="2.5" ry="3.5" fill="#00ff41"/>
+          <ellipse cx="70" cy="53" rx="2.5" ry="3.5" fill="#00ff41"/>
+          <ellipse cx="60" cy="61" rx="5" ry="3" fill="none" stroke="#00ff41" stroke-width="1"/>
+          <line x1="45" y1="63" x2="30" y2="60" stroke="#00ff41" stroke-width="0.8"/>
+          <line x1="45" y1="65" x2="29" y2="64" stroke="#00ff41" stroke-width="0.8"/>
+          <line x1="75" y1="63" x2="90" y2="60" stroke="#00ff41" stroke-width="0.8"/>
+          <line x1="75" y1="65" x2="91" y2="64" stroke="#00ff41" stroke-width="0.8"/>
+          <circle cx="60" cy="55" r="35" fill="none" stroke="#00ff41" stroke-width="0.5" opacity="0.4" stroke-dasharray="3 5"/>
+          <circle cx="60" cy="55" r="45" fill="none" stroke="#0080ff" stroke-width="0.5" opacity="0.3" stroke-dasharray="2 8"/>
+        </svg>
+      </div>
+      <div class="loader-brand">CYBER LUFFY</div>
+      <div class="loader-lines" id="loader-lines">
+        <div class="loader-line" id="line1">
+          <span class="prefix">&gt;</span>
+          <span class="text">INITIALIZING CYBER LUFFY...</span>
+          <span class="cursor blink">█</span>
+        </div>
+        <div class="loader-line hidden" id="line2">
+          <span class="prefix">&gt;</span>
+          <span class="text">LOADING SECURITY MODULES...</span>
+          <span class="cursor blink">█</span>
+        </div>
+        <div class="loader-line hidden" id="line3">
+          <span class="prefix">&gt;</span>
+          <span class="text">VERIFYING ACCESS...</span>
+          <span class="cursor blink">█</span>
+        </div>
+        <div class="loader-line hidden" id="line4">
+          <span class="prefix success">&gt;</span>
+          <span class="text success">ACCESS GRANTED</span>
+          <span class="cursor success">█</span>
+        </div>
+      </div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar" id="loader-bar"></div>
+        <div class="loader-bar-label" id="loader-pct">0%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== MAIN SITE ========== -->
+  <div id="site" class="site hidden">
+
+    <!-- MATRIX BACKGROUND -->
+    <canvas id="matrix-bg" class="matrix-bg" aria-hidden="true"></canvas>
+
+    <!-- ========== NAV ========== -->
+    <header class="nav-header" id="nav-header">
+      <nav class="nav-container" role="navigation" aria-label="Main navigation">
+        <a href="#home" class="nav-logo" aria-label="Cyber Luffy Home">
+          <div class="logo-wolf-mini" aria-hidden="true">
+            <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="25" cy="25" rx="12" ry="10" fill="none" stroke="#00ff41" stroke-width="1.2"/>
+              <polygon points="19,16 15,7 23,15" fill="#00ff41"/>
+              <polygon points="31,16 35,7 27,15" fill="#00ff41"/>
+              <ellipse cx="20" cy="24" rx="2.5" ry="3" fill="#0080ff"/>
+              <ellipse cx="30" cy="24" rx="2.5" ry="3" fill="#0080ff"/>
+              <ellipse cx="20" cy="24.5" rx="1.2" ry="1.8" fill="#00ff41"/>
+              <ellipse cx="30" cy="24.5" rx="1.2" ry="1.8" fill="#00ff41"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-main">CYBER LUFFY</span>
+            <span class="logo-sub">Securing The Digital Future</span>
+          </div>
+        </a>
+
+        <ul class="nav-links" id="nav-links" role="list">
+          <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+          <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+          <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+          <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+          <li><a href="#gallery" class="nav-link" data-section="gallery">Cyber Gallery</a></li>
+          <li><a href="#lab" class="nav-link" data-section="lab">Cyber Lab</a></li>
+          <li><a href="#blog" class="nav-link" data-section="blog">Blog</a></li>
+          <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+        </ul>
+
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- ========== HOME / HERO ========== -->
+    <section id="home" class="section hero-section">
+      <div class="hero-container">
+
+        <!-- CYBER DASHBOARD -->
+        <div class="cyber-dashboard">
+
+          <!-- Terminal Panel -->
+          <div class="dashboard-panel terminal-panel">
+            <div class="panel-header">
+              <span class="panel-title">SYSTEM TERMINAL</span>
+              <div class="panel-controls">
+                <span class="ctrl ctrl-min"></span>
+                <span class="ctrl ctrl-max"></span>
+                <span class="ctrl ctrl-close"></span>
+              </div>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+              <div class="terminal-line"><span class="t-prompt">root@cyberluffy:~#</span> <span class="t-cmd">whoami</span></div>
+              <div class="terminal-output">
+                <div class="t-out">&gt; Cyber Security Researcher</div>
+                <div class="t-out">&gt; Ethical Hacker</div>
+                <div class="t-out">&gt; Digital Guardian</div>
+                <div class="t-out">&gt; Problem Solver</div>
+              </div>
+              <div class="terminal-line mt"><span class="t-prompt">root@cyberluffy:~#</span> <span class="t-cmd">status</span></div>
+              <div class="terminal-status">
+                <div class="t-stat"><span class="t-label">SYSTEM STATUS:</span><span class="t-val secure">SECURE</span></div>
+                <div class="t-stat"><span class="t-label">FIREWALL:</span><span class="t-val active">ACTIVE</span></div>
+                <div class="t-stat"><span class="t-label">ENCRYPTION:</span><span class="t-val active">AES-256</span></div>
+                <div class="t-stat"><span class="t-label">VPN STATUS:</span><span class="t-val active">CONNECTED</span></div>
+                <div class="t-stat"><span class="t-label">THREAT LEVEL:</span><span class="t-val low">LOW</span></div>
+              </div>
+              <div class="terminal-line mt2"><span class="t-prompt blink">root@cyberluffy:~#</span> <span class="t-cursor">█</span></div>
+            </div>
+          </div>
+
+          <!-- Threat Map Panel -->
+          <div class="dashboard-panel threat-panel">
+            <div class="panel-header">
+              <span class="panel-title">CYBER THREAT MAP</span>
+              <div class="panel-badge live">● LIVE</div>
+            </div>
+            <div class="threat-map-container">
+              <canvas id="threat-map" width="600" height="320" aria-label="Global cyber threat map"></canvas>
+              <div class="threat-legend">
+                <span class="legend-item low">● LOW THREAT</span>
+                <span class="legend-item med">● MEDIUM THREAT</span>
+                <span class="legend-item high">● HIGH THREAT</span>
+                <span class="legend-item crit">● CRITICAL</span>
+              </div>
+              <div class="live-attacks-badge">
+                <div class="la-label">LIVE ATTACKS</div>
+                <div class="la-count" id="la-count">2,847</div>
+                <div class="la-delta" id="la-delta">+23.7%</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- System Overview Panel -->
+          <div class="dashboard-panel overview-panel">
+            <div class="panel-header">
+              <span class="panel-title">SYSTEM OVERVIEW</span>
+            </div>
+            <div class="overview-body">
+              <div class="security-ring-wrap">
+                <canvas id="security-ring" width="110" height="110" aria-label="Security score 99%"></canvas>
+                <div class="ring-label">
+                  <div class="ring-pct">99%</div>
+                  <div class="ring-sub">SECURE</div>
+                </div>
+              </div>
+              <div class="sys-metrics">
+                <div class="metric-row">
+                  <span class="m-label">CPU USAGE</span>
+                  <div class="m-bar-wrap"><div class="m-bar" data-pct="23" style="--pct:23%"></div></div>
+                  <span class="m-val">23%</span>
+                </div>
+                <div class="metric-row">
+                  <span class="m-label">MEMORY</span>
+                  <div class="m-bar-wrap"><div class="m-bar" data-pct="45" style="--pct:45%"></div></div>
+                  <span class="m-val">45%</span>
+                </div>
+                <div class="metric-row">
+                  <span class="m-label">DISK SPACE</span>
+                  <div class="m-bar-wrap"><div class="m-bar warning" data-pct="67" style="--pct:67%"></div></div>
+                  <span class="m-val">67%</span>
+                </div>
+                <div class="metric-row">
+                  <span class="m-label">NETWORK</span>
+                  <div class="m-bar-wrap"><div class="m-bar" data-pct="89" style="--pct:89%"></div></div>
+                  <span class="m-val">89%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Active Protocols -->
+            <div class="protocols-box">
+              <div class="proto-title">ACTIVE PROTOCOLS</div>
+              <div class="proto-row"><span>SSH</span><span class="proto-status">SECURE</span></div>
+              <div class="proto-row"><span>HTTPS</span><span class="proto-status">SECURE</span></div>
+              <div class="proto-row"><span>VPN</span><span class="proto-status">SECURE</span></div>
+              <div class="proto-row"><span>FIREWALL</span><span class="proto-status">SECURE</span></div>
+              <div class="proto-row"><span>IDS/IPS</span><span class="proto-status">SECURE</span></div>
+            </div>
+
+            <!-- Real-time monitor -->
+            <div class="realtime-box">
+              <div class="rt-title">REAL-TIME MONITOR</div>
+              <canvas id="rt-monitor" width="220" height="60" aria-label="Real-time network monitor"></canvas>
+            </div>
+          </div>
+
+        </div><!-- /cyber-dashboard -->
+
+        <!-- STATS BAR -->
+        <div class="stats-bar">
+          <div class="stat-item">
+            <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="stat-num counter" data-target="5">0</div>
+            <div class="stat-plus">+</div>
+            <div class="stat-label">YEARS EXPERIENCE</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="8"/><line x1="12" y1="4" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="20"/><line x1="4" y1="12" x2="2" y2="12"/><line x1="22" y1="12" x2="20" y2="12"/></svg></div>
+            <div class="stat-num counter" data-target="150">0</div>
+            <div class="stat-plus">+</div>
+            <div class="stat-label">PROJECTS COMPLETED</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <div class="stat-num counter" data-target="50">0</div>
+            <div class="stat-plus">+</div>
+            <div class="stat-label">CLIENTS PROTECTED</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+            <div class="stat-num counter" data-target="25">0</div>
+            <div class="stat-plus">+</div>
+            <div class="stat-label">VULNERABILITIES DISCOVERED</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/><circle cx="12" cy="12" r="10"/></svg></div>
+            <div class="stat-num counter" data-target="100">0</div>
+            <div class="stat-plus">%</div>
+            <div class="stat-label">CLIENT SATISFACTION</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="section about-section">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-eyebrow">SYS.IDENTIFY</div>
+          <h2 class="section-title">ABOUT <span class="accent">ME</span></h2>
+          <div class="title-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <!-- Profile Card -->
+          <div class="profile-card glass-card">
+            <div class="profile-glow" aria-hidden="true"></div>
+            <div class="profile-img-wrap">
+              <div class="profile-hex-border" aria-hidden="true">
+                <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+                  <polygon points="80,5 150,42 150,118 80,155 10,118 10,42" fill="none" stroke="#00ff41" stroke-width="2" stroke-dasharray="8 4"/>
+                </svg>
+              </div>
+              <img src="https://www.dropbox.com/scl/fi/9rucdw0lmerx2s0g8u78t/470138979_593473983254635_7289467087884661101_n.jpg?rlkey=a9mugs16l8r54jcetxcm0bgay&st=cxzrbgqm&dl=1" alt="Cyber Luffy - Security Researcher" class="profile-img" loading="lazy" />
+              <div class="profile-status-dot" aria-label="Online status: Active"></div>
+            </div>
+            <div class="profile-info">
+              <h3 class="profile-name">Cyber Luffy</h3>
+              <div class="profile-location">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Algeria 🇩🇿
+              </div>
+              <div class="profile-roles">
+                <span class="role-badge">🛡️ Cyber Security Enthusiast</span>
+                <span class="role-badge">🔍 Security Researcher</span>
+                <span class="role-badge">💻 Ethical Hacker</span>
+                <span class="role-badge">🌐 Web Developer</span>
+                <span class="role-badge">⚡ Tech Enthusiast</span>
+              </div>
+            </div>
+            <div class="profile-social">
+              <a href="https://www.instagram.com/lace_nx__ch" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+              </a>
+              <a href="https://www.facebook.com/ahcen.305505" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="https://www.tiktok.com/@lace_nx___ch" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="social-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- About Content -->
+          <div class="about-content">
+            <div class="about-terminal glass-card">
+              <div class="at-header">
+                <div class="at-dots"><span></span><span></span><span></span></div>
+                <span class="at-title">about.exe</span>
+              </div>
+              <div class="at-body">
+                <p class="at-text">
+                  <span class="t-prompt2">$</span> cat identity.txt
+                </p>
+                <p class="at-desc">
+                  I am <strong class="acc">Cyber Luffy</strong> — a dedicated cybersecurity enthusiast and security researcher based in Algeria. My mission is to protect the digital world by understanding how attackers think and acting before they strike.
+                </p>
+                <p class="at-desc">
+                  With expertise spanning penetration testing, OSINT, network security, and web application security, I operate in the shadows of the digital realm — not as a threat, but as its guardian.
+                </p>
+                <p class="at-desc">
+                  Every system has a weakness. My job is to find it first.
+                </p>
+                <div class="at-data-rows">
+                  <div class="at-row"><span class="at-key">alias:</span><span class="at-val">Cyber Luffy / lace_nx</span></div>
+                  <div class="at-row"><span class="at-key">location:</span><span class="at-val">Algeria 🇩🇿</span></div>
+                  <div class="at-row"><span class="at-key">focus:</span><span class="at-val">Offensive Security & Research</span></div>
+                  <div class="at-row"><span class="at-key">os:</span><span class="at-val">Kali Linux / Parrot OS</span></div>
+                  <div class="at-row"><span class="at-key">status:</span><span class="at-val acc">Available for collaboration</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-certifications glass-card">
+              <div class="cert-title">LEARNING PATH</div>
+              <div class="cert-grid">
+                <div class="cert-item"><span class="cert-ico">🎯</span><span>Penetration Testing</span></div>
+                <div class="cert-item"><span class="cert-ico">🔐</span><span>Web App Security</span></div>
+                <div class="cert-item"><span class="cert-ico">📡</span><span>Network Analysis</span></div>
+                <div class="cert-item"><span class="cert-ico">🕵️</span><span>OSINT & Recon</span></div>
+                <div class="cert-item"><span class="cert-ico">🐧</span><span>Linux Mastery</span></div>
+                <div class="cert-item"><span class="cert-ico">💡</span><span>CTF Challenges</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section id="skills" class="section skills-section">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-eyebrow">SYS.CAPABILITIES</div>
+          <h2 class="section-title">SKILLS & <span class="accent">EXPERTISE</span></h2>
+          <div class="title-line"></div>
+        </div>
+
+        <div class="skills-grid">
+
+          <div class="skill-card glass-card" data-skill="95">
+            <div class="skill-icon-wrap">
+              <div class="skill-glow" aria-hidden="true"></div>
+              <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            </div>
+            <h3 class="skill-name">CYBERSECURITY</h3>
+            <p class="skill-desc">Defense strategies, threat modeling, vulnerability assessment, and security architecture.</p>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-pct="95">
+                <div class="skill-bar-fill" style="--spct:95%"></div>
+              </div>
+              <span class="skill-pct">95%</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass-card" data-skill="88">
+            <div class="skill-icon-wrap">
+              <div class="skill-glow" aria-hidden="true"></div>
+              <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="7" stroke-dasharray="2 3"/><circle cx="12" cy="12" r="11" stroke-dasharray="2 5" opacity="0.5"/></svg>
+            </div>
+            <h3 class="skill-name">PENETRATION TESTING</h3>
+            <p class="skill-desc">Ethical hacking, exploit development, red team operations, and security assessments.</p>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-pct="88">
+                <div class="skill-bar-fill" style="--spct:88%"></div>
+              </div>
+              <span class="skill-pct">88%</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass-card" data-skill="92">
+            <div class="skill-icon-wrap">
+              <div class="skill-glow" aria-hidden="true"></div>
+              <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 5c-3.87 0-7 3.13-7 7 0 1.3.36 2.51.98 3.54L12 12"/><path d="M12 12l6.02 3.54C18.64 14.51 19 13.3 19 12c0-3.87-3.13-7-7-7z"/><path d="M12 12v7c3.87 0 7-3.13 7-7"/></svg>
+            </div>
+            <h3 class="skill-name">OSINT</h3>
+            <p class="skill-desc">Open-source intelligence gathering, digital footprint analysis, and data correlation.</p>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-pct="92">
+                <div class="skill-bar-fill" style="--spct:92%"></div>
+              </div>
+              <span class="skill-pct">92%</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass-card" data-skill="85">
+            <div class="skill-icon-wrap">
+              <div class="skill-glow" aria-hidden="true"></div>
+              <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="8" height="8" rx="1"/><rect x="14" y="2" width="8" height="8" rx="1"/><rect x="2" y="14" width="8" height="8" rx="1"/><rect x="14" y="14" width="8" height="8" rx="1"/><line x1="10" y1="6" x2="14" y2="6"/><line x1="10" y1="18" x2="14" y2="18"/><line x1="6" y1="10" x2="6" y2="14"/><line x1="18" y1="10" x2="18" y2="14"/></svg>
+            </div>
+            <h3 class="skill-name">NETWORK SECURITY</h3>
+            <p class="skill-desc">Traffic analysis, firewall configuration, intrusion detection, and protocol security.</p>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-pct="85">
+                <div class="skill-bar-fill" style="--spct:85%"></div>
+              </div>
+              <span class="skill-pct">85%</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass-card" data-skill="90">
+            <div class="skill-icon-wrap">
+              <div class="skill-glow" aria-hidden="true"></div>
+              <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3 class="skill-name">WEB SECURITY</h3>
+            <p class="skill-desc">XSS, SQLi, CSRF, authentication bypasses, API security, and OWASP Top 10.</p>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-pct="90">
+                <div class="skill-bar-fill" style="--spct:90%"></div>
+              </div>
+              <span class="skill-pct">90%</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass-card" data-skill="80">
+            <div class="skill-icon-wrap">
+              <div class="skill-glow" aria-hidden="true"></div>
+              <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="12" y1="2" x2="12" y2="22" opacity="0.4"/></svg>
+            </div>
+            <h3 class="skill-name">PROGRAMMING</h3>
+            <p class="skill-desc">Python scripting, Bash automation, JavaScript, exploit scripting, and tool development.</p>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-pct="80">
+                <div class="skill-bar-fill" style="--spct:80%"></div>
+              </div>
+              <span class="skill-pct">80%</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass-card" data-skill="93">
+            <div class="skill-icon-wrap">
+              <div class="skill-glow" aria-hidden="true"></div>
+              <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2c-4 0-8 2-8 8 0 3.5 1.5 5.5 4 7v3h8v-3c2.5-1.5 4-3.5 4-7 0-6-4-8-8-8z"/><line x1="9" y1="17" x2="15" y2="17"/><line x1="9" y1="20" x2="15" y2="20"/><circle cx="12" cy="9" r="2"/></svg>
+            </div>
+            <h3 class="skill-name">LINUX</h3>
+            <p class="skill-desc">Kali Linux, Parrot OS, command line mastery, system hardening, and kernel exploitation.</p>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar" data-pct="93">
+                <div class="skill-bar-fill" style="--spct:93%"></div>
+              </div>
+              <span class="skill-pct">93%</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section id="projects" class="section projects-section">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-eyebrow">SYS.PORTFOLIO</div>
+          <h2 class="section-title">FEATURED <span class="accent">PROJECTS</span></h2>
+          <div class="title-line"></div>
+        </div>
+
+        <div class="projects-grid">
+
+          <article class="project-card glass-card">
+            <div class="project-img-wrap">
+              <div class="project-img-placeholder" style="background:linear-gradient(135deg,#001a00,#003300)">
+                <svg viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="80" height="60"><rect x="5" y="5" width="70" height="50" rx="4" stroke="#00ff41" stroke-width="1"/><line x1="5" y1="16" x2="75" y2="16" stroke="#00ff41" stroke-width="0.5"/><circle cx="11" cy="11" r="2" fill="#ff3333"/><circle cx="19" cy="11" r="2" fill="#ffaa00"/><circle cx="27" cy="11" r="2" fill="#00ff41"/><text x="10" y="30" fill="#00ff41" font-size="8" font-family="monospace">VULN_SCAN</text><text x="10" y="42" fill="#00aa22" font-size="6" font-family="monospace">STATUS: RUNNING</text></svg>
+              </div>
+              <div class="project-overlay">
+                <span class="project-tag">Security Tool</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">VULNERABILITY SCANNER</h3>
+              <p class="project-desc">Advanced web vulnerability scanner with AI-powered detection, automated reporting, and real-time threat assessment across multiple attack vectors.</p>
+              <div class="project-techs">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Nmap</span>
+                <span class="tech-badge">SQLMap</span>
+                <span class="tech-badge">AI/ML</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="btn-project-primary" aria-label="View Vulnerability Scanner project">VIEW PROJECT →</a>
+                <a href="#" class="btn-project-ghost" aria-label="View source code">SOURCE</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass-card">
+            <div class="project-img-wrap">
+              <div class="project-img-placeholder" style="background:linear-gradient(135deg,#000a1a,#001a33)">
+                <svg viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="80" height="60"><rect x="5" y="5" width="70" height="50" rx="4" stroke="#0080ff" stroke-width="1"/><polyline points="10,45 20,30 30,38 42,22 55,35 70,18" stroke="#0080ff" stroke-width="1.5" fill="none"/><text x="10" y="15" fill="#0080ff" font-size="7" font-family="monospace">NET_MONITOR</text></svg>
+              </div>
+              <div class="project-overlay">
+                <span class="project-tag">Network Tool</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">NETWORK MONITOR</h3>
+              <p class="project-desc">Real-time network monitoring and threat detection system with packet analysis, anomaly detection, and automated incident response capabilities.</p>
+              <div class="project-techs">
+                <span class="tech-badge">Wireshark</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Scapy</span>
+                <span class="tech-badge">ELK Stack</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="btn-project-primary" aria-label="View Network Monitor project">VIEW PROJECT →</a>
+                <a href="#" class="btn-project-ghost" aria-label="View source code">SOURCE</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass-card">
+            <div class="project-img-wrap">
+              <div class="project-img-placeholder" style="background:linear-gradient(135deg,#0d0015,#1a0033)">
+                <svg viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="80" height="60"><rect x="5" y="5" width="70" height="50" rx="4" stroke="#aa00ff" stroke-width="1"/><circle cx="40" cy="32" r="15" stroke="#aa00ff" stroke-width="1"/><line x1="40" y1="17" x2="40" y2="47" stroke="#aa00ff" stroke-width="0.5"/><line x1="25" y1="32" x2="55" y2="32" stroke="#aa00ff" stroke-width="0.5"/><text x="8" y="14" fill="#aa00ff" font-size="7" font-family="monospace">OSINT_FRAMEWORK</text></svg>
+              </div>
+              <div class="project-overlay">
+                <span class="project-tag">Intelligence</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">OSINT FRAMEWORK</h3>
+              <p class="project-desc">Open source intelligence gathering and analysis tool with automated data correlation, social media tracking, and comprehensive digital footprint mapping.</p>
+              <div class="project-techs">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Maltego</span>
+                <span class="tech-badge">Shodan</span>
+                <span class="tech-badge">Recon-ng</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="btn-project-primary" aria-label="View OSINT Framework project">VIEW PROJECT →</a>
+                <a href="#" class="btn-project-ghost" aria-label="View source code">SOURCE</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass-card">
+            <div class="project-img-wrap">
+              <div class="project-img-placeholder" style="background:linear-gradient(135deg,#1a0000,#330000)">
+                <svg viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="80" height="60"><rect x="5" y="5" width="70" height="50" rx="4" stroke="#ff3333" stroke-width="1"/><rect x="15" y="20" width="50" height="25" rx="2" stroke="#ff3333" stroke-width="0.8"/><text x="10" y="14" fill="#ff3333" font-size="7" font-family="monospace">PWD_CRACKER</text><text x="18" y="35" fill="#ff3333" font-size="9" font-family="monospace">••••••••</text><text x="18" y="42" fill="#ff5555" font-size="6" font-family="monospace">CRACKING...</text></svg>
+              </div>
+              <div class="project-overlay">
+                <span class="project-tag">Security Research</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">PASSWORD ANALYZER</h3>
+              <p class="project-desc">Advanced password strength analysis and hash cracking research tool with dictionary attacks, rule-based attacks, and entropy calculation for security audits.</p>
+              <div class="project-techs">
+                <span class="tech-badge">Hashcat</span>
+                <span class="tech-badge">John</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Bash</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="btn-project-primary" aria-label="View Password Analyzer project">VIEW PROJECT →</a>
+                <a href="#" class="btn-project-ghost" aria-label="View source code">SOURCE</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass-card">
+            <div class="project-img-wrap">
+              <div class="project-img-placeholder" style="background:linear-gradient(135deg,#001a0d,#003320)">
+                <svg viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="80" height="60"><rect x="5" y="5" width="70" height="50" rx="4" stroke="#00ff88" stroke-width="1"/><text x="8" y="14" fill="#00ff88" font-size="7" font-family="monospace">CTF_TOOLKIT</text><text x="10" y="28" fill="#00cc66" font-size="6" font-family="monospace">$ decode --base64</text><text x="10" y="37" fill="#00cc66" font-size="6" font-family="monospace">$ crack --hash md5</text><text x="10" y="46" fill="#00cc66" font-size="6" font-family="monospace">$ exploit --target</text></svg>
+              </div>
+              <div class="project-overlay">
+                <span class="project-tag">CTF Tool</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">CTF TOOLKIT</h3>
+              <p class="project-desc">Comprehensive Capture The Flag toolkit with automated challenge solvers, cryptography tools, steganography detection, and reverse engineering utilities.</p>
+              <div class="project-techs">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">GDB</span>
+                <span class="tech-badge">Radare2</span>
+                <span class="tech-badge">Pwntools</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="btn-project-primary" aria-label="View CTF Toolkit project">VIEW PROJECT →</a>
+                <a href="#" class="btn-project-ghost" aria-label="View source code">SOURCE</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass-card">
+            <div class="project-img-wrap">
+              <div class="project-img-placeholder" style="background:linear-gradient(135deg,#0a0a1a,#0a0a33)">
+                <svg viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="80" height="60"><rect x="5" y="5" width="70" height="50" rx="4" stroke="#4488ff" stroke-width="1"/><text x="8" y="14" fill="#4488ff" font-size="7" font-family="monospace">PHISH_DETECT</text><path d="M15 40 Q40 20 65 38" stroke="#4488ff" stroke-width="1.5" fill="none"/><circle cx="40" cy="27" r="6" stroke="#4488ff" stroke-width="1"/><line x1="40" y1="21" x2="40" y2="15" stroke="#4488ff" stroke-width="1"/></svg>
+              </div>
+              <div class="project-overlay">
+                <span class="project-tag">Anti-Phishing</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">PHISHING DETECTOR</h3>
+              <p class="project-desc">Machine learning-powered phishing URL and email detection system with real-time analysis, domain reputation checking, and threat intelligence integration.</p>
+              <div class="project-techs">
+                <span class="tech-badge">ML/AI</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">TensorFlow</span>
+                <span class="tech-badge">VirusTotal API</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="btn-project-primary" aria-label="View Phishing Detector project">VIEW PROJECT →</a>
+                <a href="#" class="btn-project-ghost" aria-label="View source code">SOURCE</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CYBER GALLERY ========== -->
+    <section id="gallery" class="section gallery-section">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-eyebrow">SYS.GALLERY</div>
+          <h2 class="section-title">CYBER <span class="accent">GALLERY</span></h2>
+          <div class="title-line"></div>
+        </div>
+
+        <!-- Gallery Tabs -->
+        <div class="gallery-tabs" role="tablist" aria-label="Gallery categories">
+          <button class="gallery-tab active" role="tab" aria-selected="true" aria-controls="gallery-real" data-gallery="real" id="tab-real">
+            <span class="tab-ico">✅</span> REAL PHOTOS
+          </button>
+          <button class="gallery-tab" role="tab" aria-selected="false" aria-controls="gallery-ai" data-gallery="ai" id="tab-ai">
+            <span class="tab-ico">🤖</span> AI GENERATED
+          </button>
+        </div>
+
+        <!-- Real Photos Gallery -->
+        <div id="gallery-real" class="gallery-grid active" role="tabpanel" aria-labelledby="tab-real">
+          <!-- Real photo images -->
+          <div class="gallery-item" data-caption="Cyber Operations">
+            <img src="https://www.dropbox.com/scl/fi/xkol7uol4p16g5l62gg1o/57134cde-6c20-469b-af9e-c379e59bffc0.jfif?rlkey=hd79xx1y21orpg0vbly74wqns&st=6folnzvy&dl=1" alt="Real photo 1" loading="lazy" />
+            <div class="gallery-badge real">✅ REAL PHOTO</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="Security Research">
+            <img src="https://www.dropbox.com/scl/fi/9rucdw0lmerx2s0g8u78t/470138979_593473983254635_7289467087884661101_n.jpg?rlkey=a9mugs16l8r54jcetxcm0bgay&st=cxzrbgqm&dl=1" alt="Real photo 2" loading="lazy" />
+            <div class="gallery-badge real">✅ REAL PHOTO</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="Lab Environment">
+            <img src="https://www.dropbox.com/scl/fi/c30q24oc58kyztptg7d2k/470207649_593495473252486_3146143220612070447_n.jpg?rlkey=xei7ygv0xtldoluloywyh9xaz&st=zauc5qyh&dl=1" alt="Real photo 3" loading="lazy" />
+            <div class="gallery-badge real">✅ REAL PHOTO</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="Network Setup">
+            <img src="https://www.dropbox.com/scl/fi/db21byjw516now99xy80s/5895486292374964040_121.jpg?rlkey=sg9nd4mvzoh32ex0b6itw0mx8&st=d0seynt2&dl=1" alt="Real photo 4" loading="lazy" />
+            <div class="gallery-badge real">✅ REAL PHOTO</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="CTF Competition">
+            <img src="https://www.dropbox.com/scl/fi/wsyton6xytey1i7j1mb18/5969672725607860573_121.jpg?rlkey=4xm8f83t0qyz06kf2nr906v7x&st=kufr6q86&dl=1" alt="Real photo 5" loading="lazy" />
+            <div class="gallery-badge real">✅ REAL PHOTO</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="Terminal Session">
+            <img src="https://www.dropbox.com/scl/fi/nvq7benuyi57ilpep41u2/5992078814076849469_121.jpg?rlkey=pxwobo5ybyxks0yr53j0o4rn5&st=fg1hrzbu&dl=1" alt="Real photo 6" loading="lazy" />
+            <div class="gallery-badge real">✅ REAL PHOTO</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="Security Tools">
+            <img src="https://www.dropbox.com/scl/fi/v04nr2mgfj02b9yjg0qnf/5992078814076849478_121.jpg?rlkey=94zs7ka2zt2avjpnctpyihmsg&st=g31w64r6&dl=1" alt="Real photo 7" loading="lazy" />
+            <div class="gallery-badge real">✅ REAL PHOTO</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="Hacking Lab">
+            <img src="https://www.dropbox.com/scl/fi/k8etaukjosn6eg1bxtb6j/5992078814076849482_121.jpg?rlkey=3pqmik1x0vum7fhsnk994o8m2&st=9unnyfm2&dl=1" alt="Real photo 8" loading="lazy" />
+            <div class="gallery-badge real">✅ REAL PHOTO</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="Code Review">
+            <img src="https://www.dropbox.com/scl/fi/q1bviar0celfjoikoyia5/5992078814076849506_121.jpg?rlkey=nzkzpnn7oo4g9hye0t5frcddq&st=7whw3emd&dl=1" alt="Real photo 9" loading="lazy" />
+            <div class="gallery-badge real">✅ REAL PHOTO</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="Research Session">
+            <img src="https://www.dropbox.com/scl/fi/sk64sp56wluzuplcq4p11/5992078814076849668_121.jpg?rlkey=3t6c70cv2ix4lvq0bw3nsyhq1&st=evyokyki&dl=1" alt="Real photo 10" loading="lazy" />
+            <div class="gallery-badge real">✅ REAL PHOTO</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="Threat Analysis">
+            <img src="https://www.dropbox.com/scl/fi/ifplxlu51rr068znlhh6e/5992078814076849687_121.jpg?rlkey=dlyfhurcqbazn02x78g6ccwzj&st=xyypvjt8&dl=1" alt="Real photo 11" loading="lazy" />
+            <div class="gallery-badge real">✅ REAL PHOTO</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="Digital Defense">
+            <img src="https://www.dropbox.com/scl/fi/dydbzs6tjgd4nac9umjl6/5992078814076849762_121.jpg?rlkey=yveyg6jh94jo5onpqmqfn42u6&st=ptxu6bwo&dl=1" alt="Real photo 12" loading="lazy" />
+            <div class="gallery-badge real">✅ REAL PHOTO</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="Cyber Profile">
+            <img src="https://www.dropbox.com/scl/fi/w0t07wyv333xs0uyp8iq1/ChatGPT-Image-25-2026-07_56_53.png?rlkey=gv2na4luum7hi3f84judhw6x0&st=4finkf3w&dl=1" alt="Real photo 13" loading="lazy" />
+            <div class="gallery-badge real">✅ REAL PHOTO</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="Operation Center">
+            <img src="https://www.dropbox.com/scl/fi/j1mm5evh7hzuxaebrjzml/ChatGPT-Image-28-2026-06_15_42.png?rlkey=sw56g7zh4laczgfwu4398h56w&st=ru4gtnof&dl=1" alt="Real photo 14" loading="lazy" />
+            <div class="gallery-badge real">✅ REAL PHOTO</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="Security Monitor">
+            <img src="https://www.dropbox.com/scl/fi/s46zqq2ipjyjlbhzqfeqi/ChatGPT-Image-25-2026-07_46_57.png?rlkey=0qpyrivj0o7n7ciwqzbll1gjp&st=v3wvn6hu&dl=1" alt="Real photo 15" loading="lazy" />
+            <div class="gallery-badge real">✅ REAL PHOTO</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="Cyber Luffy Identity">
+            <img src="https://www.dropbox.com/scl/fi/9jbyizh1lkrm6uw2sgiyn/ChatGPT-Image-1-2026-01_14_31.png?rlkey=7j9fus08u219tuwfwod479krf&st=chnmwkwn&dl=1" alt="Real photo 16" loading="lazy" />
+            <div class="gallery-badge real">✅ REAL PHOTO</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+        </div>
+
+        <!-- AI Generated Photos Gallery -->
+        <div id="gallery-ai" class="gallery-grid" role="tabpanel" aria-labelledby="tab-ai" hidden>
+          <div class="gallery-item" data-caption="AI Vision 1">
+            <img src="https://www.dropbox.com/scl/fi/k9uwn0hmbm1nbodiosmgk/ChatGPT-Image-14-2026-05_47_00.png?rlkey=x7rj2bzn835oe4sffet5lqtux&st=mlt7jhpo&dl=1" alt="AI generated image 1" loading="lazy" />
+            <div class="gallery-badge ai">🤖 AI GENERATED</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="AI Vision 2">
+            <img src="https://www.dropbox.com/scl/fi/3n7ru6wuzkwyagaz30yhf/ChatGPT-Image-14-2026-05_49_55.png?rlkey=zgn17tn09137c5dbvf457ijfj&st=nwft8hzx&dl=1" alt="AI generated image 2" loading="lazy" />
+            <div class="gallery-badge ai">🤖 AI GENERATED</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="AI Vision 3">
+            <img src="https://www.dropbox.com/scl/fi/ohv1vc63m92nm6aots91r/ChatGPT-Image-14-2026-05_59_38.png?rlkey=8pv40zhy3ofxbsqd7m1k204sr&st=raby8rhk&dl=1" alt="AI generated image 3" loading="lazy" />
+            <div class="gallery-badge ai">🤖 AI GENERATED</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="AI Vision 4">
+            <img src="https://www.dropbox.com/scl/fi/x6tvxkvcie6gxznz29tne/ChatGPT-Image-4-2026-05_40_18.png?rlkey=o0eh05b7fpfv6qi0ah2uk9zg9&st=6rffbemk&dl=1" alt="AI generated image 4" loading="lazy" />
+            <div class="gallery-badge ai">🤖 AI GENERATED</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="AI Vision 5">
+            <img src="https://www.dropbox.com/scl/fi/3mf9tw5wx5mp9ac5jw367/ChatGPT-Image-4-2026-05_58_00.png?rlkey=wwztfgahnf7as9mw9fjc2ibcp&st=r1gubb0a&dl=1" alt="AI generated image 5" loading="lazy" />
+            <div class="gallery-badge ai">🤖 AI GENERATED</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="AI Vision 6">
+            <img src="https://www.dropbox.com/scl/fi/ghm7pdxyu112lcgnmwxob/ChatGPT-Image-4-2026-06_25_32.png?rlkey=rdulf7r7hfpl072lgh310ebtw&st=lt904ibn&dl=1" alt="AI generated image 6" loading="lazy" />
+            <div class="gallery-badge ai">🤖 AI GENERATED</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="AI Vision 7">
+            <img src="https://www.dropbox.com/scl/fi/osu0vx73eihd9ouf74zb4/ChatGPT-Image-4-2026-06_28_02.png?rlkey=25uqw7oahxv4ie0jbdb2ws005&st=mtqo9df6&dl=1" alt="AI generated image 7" loading="lazy" />
+            <div class="gallery-badge ai">🤖 AI GENERATED</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="AI Vision 8">
+            <img src="https://www.dropbox.com/scl/fi/y8tjgd2zlwbkefag2a0x5/ChatGPT-Image-7-2026-03_33_19.png?rlkey=xrzc94ejw96s9yke8471on231&st=jpnhpa97&dl=1" alt="AI generated image 8" loading="lazy" />
+            <div class="gallery-badge ai">🤖 AI GENERATED</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="AI Vision 9">
+            <img src="https://www.dropbox.com/scl/fi/p2tne1845q5rwoo2u115f/ChatGPT-Image-7-2026-03_33_26.png?rlkey=l29q2yabcfyb0clz3r99perkq&st=lvu38phr&dl=1" alt="AI generated image 9" loading="lazy" />
+            <div class="gallery-badge ai">🤖 AI GENERATED</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="AI Vision 10">
+            <img src="https://www.dropbox.com/scl/fi/ms33plz7ocv0r4rh7x7vo/ChatGPT-Image-4-2026-06_47_47.png?rlkey=cnzmd7kajsp4twsj75buyyf8y&st=zzgikolz&dl=1" alt="AI generated image 10" loading="lazy" />
+            <div class="gallery-badge ai">🤖 AI GENERATED</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="AI Vision 11">
+            <img src="https://www.dropbox.com/scl/fi/o72bwmma0h1qzrzc78361/ChatGPT-Image-8-2026-06_26_43.png?rlkey=yd5280uear6aqzk1rllyegvgj&st=dzenwrsr&dl=1" alt="AI generated image 11" loading="lazy" />
+            <div class="gallery-badge ai">🤖 AI GENERATED</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="AI Vision 12">
+            <img src="https://www.dropbox.com/scl/fi/5diomnkvmlyy7psqnjfun/ChatGPT-Image-9-2026-10_44_33.png?rlkey=fw2eqdwisou995sio03gy43gm&st=vsk80c62&dl=1" alt="AI generated image 12" loading="lazy" />
+            <div class="gallery-badge ai">🤖 AI GENERATED</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="AI Vision 13">
+            <img src="https://www.dropbox.com/scl/fi/5b4xnuxbsge0xatxabxf0/ChatGPT-Image-14-2026-05_20_53.png?rlkey=wx40e6tlablwql5gz9p3mzuxc&st=k8gs2tvr&dl=1" alt="AI generated image 13" loading="lazy" />
+            <div class="gallery-badge ai">🤖 AI GENERATED</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="AI Vision 14">
+            <img src="https://www.dropbox.com/scl/fi/wsblatvt09rdbf3uok72d/zzzzz.png?rlkey=241twwbvdbxu1a53o044ttqmn&st=osumybbp&dl=1" alt="AI generated image 14" loading="lazy" />
+            <div class="gallery-badge ai">🤖 AI GENERATED</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+          <div class="gallery-item" data-caption="AI Vision 15">
+            <img src="https://www.dropbox.com/scl/fi/xzq7bl9ttuet6vi94svum/K.png?rlkey=slp1o9chh1xuzgwklg3t0ps0s&st=r0gaacqg&dl=1" alt="AI generated image 15" loading="lazy" />
+            <div class="gallery-badge ai">🤖 AI GENERATED</div>
+            <div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Lightbox -->
+      <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close image viewer">✕</button>
+        <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous image">‹</button>
+        <button class="lightbox-next" id="lightbox-next" aria-label="Next image">›</button>
+        <div class="lightbox-inner">
+          <img id="lightbox-img" src="" alt="" />
+          <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========== CYBER LAB ========== -->
+    <section id="lab" class="section lab-section">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-eyebrow">SYS.LAB</div>
+          <h2 class="section-title">CYBER <span class="accent">LAB</span></h2>
+          <div class="title-line"></div>
+        </div>
+
+        <div class="lab-grid">
+
+          <!-- Favorite Tools -->
+          <div class="lab-card glass-card lab-tools">
+            <div class="lab-card-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              <h3>FAVORITE TOOLS</h3>
+            </div>
+            <div class="tools-grid">
+              <div class="tool-item"><span class="tool-icon">🗡️</span><span class="tool-name">Metasploit</span><span class="tool-cat">Exploitation</span></div>
+              <div class="tool-item"><span class="tool-icon">🦈</span><span class="tool-name">Wireshark</span><span class="tool-cat">Network</span></div>
+              <div class="tool-item"><span class="tool-icon">🗺️</span><span class="tool-name">Nmap</span><span class="tool-cat">Scanning</span></div>
+              <div class="tool-item"><span class="tool-icon">🕷️</span><span class="tool-name">Burp Suite</span><span class="tool-cat">Web Security</span></div>
+              <div class="tool-item"><span class="tool-icon">🔓</span><span class="tool-name">Hashcat</span><span class="tool-cat">Password</span></div>
+              <div class="tool-item"><span class="tool-icon">📡</span><span class="tool-name">Aircrack-ng</span><span class="tool-cat">Wireless</span></div>
+              <div class="tool-item"><span class="tool-icon">🐍</span><span class="tool-name">SQLmap</span><span class="tool-cat">SQL Injection</span></div>
+              <div class="tool-item"><span class="tool-icon">🔭</span><span class="tool-name">Shodan</span><span class="tool-cat">OSINT</span></div>
+              <div class="tool-item"><span class="tool-icon">🦊</span><span class="tool-name">Nikto</span><span class="tool-cat">Web Scanner</span></div>
+              <div class="tool-item"><span class="tool-icon">🧲</span><span class="tool-name">Maltego</span><span class="tool-cat">Intelligence</span></div>
+            </div>
+          </div>
+
+          <!-- Linux Environments -->
+          <div class="lab-card glass-card lab-envs">
+            <div class="lab-card-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              <h3>LINUX ENVIRONMENTS</h3>
+            </div>
+            <div class="env-list">
+              <div class="env-item active-env">
+                <div class="env-logo kali">K</div>
+                <div class="env-info"><span class="env-name">Kali Linux</span><span class="env-desc">Primary Attack Platform</span></div>
+                <div class="env-badge primary">PRIMARY</div>
+              </div>
+              <div class="env-item">
+                <div class="env-logo parrot">P</div>
+                <div class="env-info"><span class="env-name">Parrot OS</span><span class="env-desc">Security & Anonymity</span></div>
+                <div class="env-badge secondary">ACTIVE</div>
+              </div>
+              <div class="env-item">
+                <div class="env-logo ubuntu">U</div>
+                <div class="env-info"><span class="env-name">Ubuntu Server</span><span class="env-desc">Lab Infrastructure</span></div>
+                <div class="env-badge secondary">ACTIVE</div>
+              </div>
+              <div class="env-item">
+                <div class="env-logo arch">A</div>
+                <div class="env-info"><span class="env-name">Arch Linux</span><span class="env-desc">Advanced Customization</span></div>
+                <div class="env-badge secondary">LEARNING</div>
+              </div>
+              <div class="env-item">
+                <div class="env-logo tails">T</div>
+                <div class="env-info"><span class="env-name">Tails OS</span><span class="env-desc">Anonymity & Privacy</span></div>
+                <div class="env-badge secondary">ACTIVE</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Learning Progress -->
+          <div class="lab-card glass-card lab-progress">
+            <div class="lab-card-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+              <h3>LEARNING PROGRESS</h3>
+            </div>
+            <div class="progress-list">
+              <div class="prog-item">
+                <div class="prog-head"><span>Buffer Overflow Exploitation</span><span class="prog-pct">78%</span></div>
+                <div class="prog-bar"><div class="prog-fill" style="--pp:78%"></div></div>
+              </div>
+              <div class="prog-item">
+                <div class="prog-head"><span>Malware Analysis</span><span class="prog-pct">65%</span></div>
+                <div class="prog-bar"><div class="prog-fill" style="--pp:65%"></div></div>
+              </div>
+              <div class="prog-item">
+                <div class="prog-head"><span>Reverse Engineering</span><span class="prog-pct">55%</span></div>
+                <div class="prog-bar"><div class="prog-fill" style="--pp:55%"></div></div>
+              </div>
+              <div class="prog-item">
+                <div class="prog-head"><span>Cloud Security (AWS/Azure)</span><span class="prog-pct">70%</span></div>
+                <div class="prog-bar"><div class="prog-fill" style="--pp:70%"></div></div>
+              </div>
+              <div class="prog-item">
+                <div class="prog-head"><span>Mobile App Pentesting</span><span class="prog-pct">60%</span></div>
+                <div class="prog-bar"><div class="prog-fill" style="--pp:60%"></div></div>
+              </div>
+              <div class="prog-item">
+                <div class="prog-head"><span>Active Directory Attacks</span><span class="prog-pct">82%</span></div>
+                <div class="prog-bar"><div class="prog-fill" style="--pp:82%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tech Stack -->
+          <div class="lab-card glass-card lab-stack">
+            <div class="lab-card-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              <h3>TECHNOLOGY STACK</h3>
+            </div>
+            <div class="stack-cloud">
+              <span class="stack-tag lg">Python</span>
+              <span class="stack-tag md">Bash</span>
+              <span class="stack-tag sm">C</span>
+              <span class="stack-tag md">JavaScript</span>
+              <span class="stack-tag sm">PHP</span>
+              <span class="stack-tag lg">Kali Linux</span>
+              <span class="stack-tag md">Docker</span>
+              <span class="stack-tag sm">Git</span>
+              <span class="stack-tag lg">Metasploit</span>
+              <span class="stack-tag md">Burp Suite</span>
+              <span class="stack-tag sm">Nmap</span>
+              <span class="stack-tag md">Wireshark</span>
+              <span class="stack-tag lg">SQLMap</span>
+              <span class="stack-tag sm">GDB</span>
+              <span class="stack-tag md">Ghidra</span>
+              <span class="stack-tag sm">IDA Pro</span>
+            </div>
+          </div>
+
+          <!-- Security Labs -->
+          <div class="lab-card glass-card lab-security-labs">
+            <div class="lab-card-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <h3>SECURITY LABS</h3>
+            </div>
+            <div class="labs-list">
+              <div class="lab-entry"><span class="le-ico">🏆</span><span class="le-name">HackTheBox</span><span class="le-rank">Pro Hacker</span></div>
+              <div class="lab-entry"><span class="le-ico">🎯</span><span class="le-name">TryHackMe</span><span class="le-rank">Top 5%</span></div>
+              <div class="lab-entry"><span class="le-ico">⚔️</span><span class="le-name">CTF Competitions</span><span class="le-rank">Active Player</span></div>
+              <div class="lab-entry"><span class="le-ico">🔬</span><span class="le-name">VulnHub</span><span class="le-rank">30+ Machines</span></div>
+              <div class="lab-entry"><span class="le-ico">📚</span><span class="le-name">PortSwigger Labs</span><span class="le-rank">Advanced</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== BLOG ========== -->
+    <section id="blog" class="section blog-section">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-eyebrow">SYS.INTEL</div>
+          <h2 class="section-title">CYBER <span class="accent">BLOG</span></h2>
+          <div class="title-line"></div>
+        </div>
+
+        <!-- Blog Search & Filter -->
+        <div class="blog-controls">
+          <div class="blog-search-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="search-icon" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="search" class="blog-search" id="blog-search" placeholder="Search articles..." aria-label="Search blog articles" />
+          </div>
+          <div class="blog-cats" role="group" aria-label="Blog categories">
+            <button class="cat-btn active" data-cat="all">All</button>
+            <button class="cat-btn" data-cat="pentest">Pentesting</button>
+            <button class="cat-btn" data-cat="osint">OSINT</button>
+            <button class="cat-btn" data-cat="network">Networking</button>
+            <button class="cat-btn" data-cat="ctf">CTF</button>
+            <button class="cat-btn" data-cat="tools">Tools</button>
+          </div>
+        </div>
+
+        <div class="blog-grid" id="blog-grid">
+
+          <article class="blog-card glass-card" data-cat="pentest" data-title="getting started with web application penetration testing">
+            <div class="blog-img-wrap">
+              <div class="blog-img-placeholder" style="background:linear-gradient(135deg,#001a00,#003300)">
+                <span style="font-size:2rem">🕷️</span>
+              </div>
+              <span class="blog-category">Pentesting</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span class="blog-date">🗓️ Jun 10, 2026</span>
+                <span class="blog-read">⏱️ 8 min read</span>
+              </div>
+              <h3 class="blog-title">Getting Started with Web Application Penetration Testing</h3>
+              <p class="blog-excerpt">A comprehensive beginner's guide to web app pentesting covering OWASP Top 10, tools, methodologies, and real-world scenarios.</p>
+              <a href="#" class="blog-link" aria-label="Read Getting Started with Web Application Penetration Testing">READ MORE →</a>
+            </div>
+          </article>
+
+          <article class="blog-card glass-card" data-cat="osint" data-title="advanced osint techniques for security researchers">
+            <div class="blog-img-wrap">
+              <div class="blog-img-placeholder" style="background:linear-gradient(135deg,#0a001a,#1a0033)">
+                <span style="font-size:2rem">🔭</span>
+              </div>
+              <span class="blog-category">OSINT</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span class="blog-date">🗓️ Jun 5, 2026</span>
+                <span class="blog-read">⏱️ 12 min read</span>
+              </div>
+              <h3 class="blog-title">Advanced OSINT Techniques for Security Researchers</h3>
+              <p class="blog-excerpt">Deep dive into open-source intelligence gathering: social media analysis, dark web monitoring, and digital footprint mapping techniques.</p>
+              <a href="#" class="blog-link" aria-label="Read Advanced OSINT Techniques">READ MORE →</a>
+            </div>
+          </article>
+
+          <article class="blog-card glass-card" data-cat="network" data-title="mastering network traffic analysis with wireshark">
+            <div class="blog-img-wrap">
+              <div class="blog-img-placeholder" style="background:linear-gradient(135deg,#000a1a,#001a33)">
+                <span style="font-size:2rem">🦈</span>
+              </div>
+              <span class="blog-category">Networking</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span class="blog-date">🗓️ May 28, 2026</span>
+                <span class="blog-read">⏱️ 10 min read</span>
+              </div>
+              <h3 class="blog-title">Mastering Network Traffic Analysis with Wireshark</h3>
+              <p class="blog-excerpt">From packet capture to threat detection — learn how to analyze network traffic and identify suspicious patterns using Wireshark filters and plugins.</p>
+              <a href="#" class="blog-link" aria-label="Read Mastering Network Traffic Analysis">READ MORE →</a>
+            </div>
+          </article>
+
+          <article class="blog-card glass-card" data-cat="ctf" data-title="ctf writeup binary exploitation challenge">
+            <div class="blog-img-wrap">
+              <div class="blog-img-placeholder" style="background:linear-gradient(135deg,#1a0000,#330000)">
+                <span style="font-size:2rem">🏆</span>
+              </div>
+              <span class="blog-category">CTF</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span class="blog-date">🗓️ May 20, 2026</span>
+                <span class="blog-read">⏱️ 15 min read</span>
+              </div>
+              <h3 class="blog-title">CTF Writeup: Binary Exploitation Challenge</h3>
+              <p class="blog-excerpt">Step-by-step walkthrough of a binary exploitation challenge including buffer overflow, ROP chains, and shellcode injection techniques.</p>
+              <a href="#" class="blog-link" aria-label="Read CTF Writeup Binary Exploitation">READ MORE →</a>
+            </div>
+          </article>
+
+          <article class="blog-card glass-card" data-cat="tools" data-title="top 10 kali linux tools every hacker should master">
+            <div class="blog-img-wrap">
+              <div class="blog-img-placeholder" style="background:linear-gradient(135deg,#001a0d,#003320)">
+                <span style="font-size:2rem">🐧</span>
+              </div>
+              <span class="blog-category">Tools</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span class="blog-date">🗓️ May 15, 2026</span>
+                <span class="blog-read">⏱️ 9 min read</span>
+              </div>
+              <h3 class="blog-title">Top 10 Kali Linux Tools Every Hacker Should Master</h3>
+              <p class="blog-excerpt">A curated guide to the most powerful tools in Kali Linux's arsenal — from network scanners to exploitation frameworks and post-exploitation kits.</p>
+              <a href="#" class="blog-link" aria-label="Read Top 10 Kali Linux Tools">READ MORE →</a>
+            </div>
+          </article>
+
+          <article class="blog-card glass-card" data-cat="pentest" data-title="sql injection a complete guide from basics to advanced">
+            <div class="blog-img-wrap">
+              <div class="blog-img-placeholder" style="background:linear-gradient(135deg,#0a0a00,#1a1a00)">
+                <span style="font-size:2rem">💉</span>
+              </div>
+              <span class="blog-category">Pentesting</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span class="blog-date">🗓️ May 8, 2026</span>
+                <span class="blog-read">⏱️ 20 min read</span>
+              </div>
+              <h3 class="blog-title">SQL Injection: A Complete Guide from Basics to Advanced</h3>
+              <p class="blog-excerpt">Everything you need to know about SQL injection attacks — detection, exploitation, blind SQLi, out-of-band techniques, and prevention strategies.</p>
+              <a href="#" class="blog-link" aria-label="Read SQL Injection Complete Guide">READ MORE →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="section contact-section">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-eyebrow">SYS.CONNECT</div>
+          <h2 class="section-title">CONTACT <span class="accent">ME</span></h2>
+          <div class="title-line"></div>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-info">
+            <div class="contact-terminal glass-card">
+              <div class="ct-header">
+                <div class="at-dots"><span></span><span></span><span></span></div>
+                <span class="at-title">contact.sh</span>
+              </div>
+              <div class="ct-body">
+                <div class="ct-line"><span class="t-prompt2">$</span> ./connect --target CyberLuffy</div>
+                <div class="ct-out">Establishing secure channel...</div>
+                <div class="ct-out success">✓ Encrypted connection established</div>
+                <div class="ct-spacer"></div>
+                <div class="ct-info-row">
+                  <span class="ci-ico">📧</span>
+                  <span class="ci-label">EMAIL:</span>
+                  <a href="mailto:cyberluffy@proton.me" class="ci-val">cyberluffy@proton.me</a>
+                </div>
+                <div class="ct-info-row">
+                  <span class="ci-ico">📍</span>
+                  <span class="ci-label">LOCATION:</span>
+                  <span class="ci-val">Algeria 🇩🇿</span>
+                </div>
+                <div class="ct-info-row">
+                  <span class="ci-ico">⏰</span>
+                  <span class="ci-label">TIMEZONE:</span>
+                  <span class="ci-val">CET (UTC+1)</span>
+                </div>
+                <div class="ct-info-row">
+                  <span class="ci-ico">🟢</span>
+                  <span class="ci-label">STATUS:</span>
+                  <span class="ci-val success">Available for Work</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-links glass-card">
+              <h4 class="social-title">FOLLOW THE TRAIL</h4>
+              <div class="social-list">
+                <a href="https://www.instagram.com/lace_nx__ch" target="_blank" rel="noopener noreferrer" class="social-link-item" aria-label="Instagram @lace_nx__ch">
+                  <div class="sli-icon insta">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+                  </div>
+                  <div class="sli-info">
+                    <span class="sli-platform">Instagram</span>
+                    <span class="sli-handle">@lace_nx__ch</span>
+                  </div>
+                  <span class="sli-arrow">→</span>
+                </a>
+                <a href="https://www.facebook.com/ahcen.305505" target="_blank" rel="noopener noreferrer" class="social-link-item" aria-label="Facebook">
+                  <div class="sli-icon fb">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                  </div>
+                  <div class="sli-info">
+                    <span class="sli-platform">Facebook</span>
+                    <span class="sli-handle">Ahcen</span>
+                  </div>
+                  <span class="sli-arrow">→</span>
+                </a>
+                <a href="https://www.tiktok.com/@lace_nx___ch" target="_blank" rel="noopener noreferrer" class="social-link-item" aria-label="TikTok @lace_nx___ch">
+                  <div class="sli-icon tiktok">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+                  </div>
+                  <div class="sli-info">
+                    <span class="sli-platform">TikTok</span>
+                    <span class="sli-handle">@lace_nx___ch</span>
+                  </div>
+                  <span class="sli-arrow">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrap glass-card">
+            <div class="form-header">
+              <div class="at-dots"><span></span><span></span><span></span></div>
+              <span class="at-title">send_message.exe</span>
+            </div>
+            <form id="contact-form" class="contact-form" novalidate aria-label="Contact form">
+              <div class="form-group">
+                <label for="cf-name" class="form-label">NAME <span class="required">*</span></label>
+                <div class="input-wrap">
+                  <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  <input type="text" id="cf-name" name="name" class="form-input" placeholder="Your name" autocomplete="name" required aria-required="true" />
+                </div>
+                <span class="form-error" id="err-name"></span>
+              </div>
+              <div class="form-group">
+                <label for="cf-email" class="form-label">EMAIL <span class="required">*</span></label>
+                <div class="input-wrap">
+                  <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <input type="email" id="cf-email" name="email" class="form-input" placeholder="your@email.com" autocomplete="email" required aria-required="true" />
+                </div>
+                <span class="form-error" id="err-email"></span>
+              </div>
+              <div class="form-group">
+                <label for="cf-subject" class="form-label">SUBJECT</label>
+                <div class="input-wrap">
+                  <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="10" y2="18"/></svg>
+                  <input type="text" id="cf-subject" name="subject" class="form-input" placeholder="Message subject" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="cf-message" class="form-label">MESSAGE <span class="required">*</span></label>
+                <textarea id="cf-message" name="message" class="form-textarea" placeholder="Describe your project or inquiry..." rows="5" required aria-required="true"></textarea>
+                <span class="form-error" id="err-message"></span>
+              </div>
+              <button type="submit" class="btn-send" id="btn-send" aria-label="Send message">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                SEND MESSAGE
+              </button>
+              <div class="form-status" id="form-status" role="alert" aria-live="polite"></div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="footer-wolf" aria-hidden="true">
+              <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+                <ellipse cx="25" cy="25" rx="12" ry="10" fill="none" stroke="#00ff41" stroke-width="1.2"/>
+                <polygon points="19,16 15,7 23,15" fill="#00ff41"/>
+                <polygon points="31,16 35,7 27,15" fill="#00ff41"/>
+                <ellipse cx="20" cy="24" rx="2.5" ry="3" fill="#0080ff"/>
+                <ellipse cx="30" cy="24" rx="2.5" ry="3" fill="#0080ff"/>
+                <ellipse cx="20" cy="24.5" rx="1.2" ry="1.8" fill="#00ff41"/>
+                <ellipse cx="30" cy="24.5" rx="1.2" ry="1.8" fill="#00ff41"/>
+              </svg>
+            </div>
+            <div>
+              <div class="footer-name">CYBER LUFFY</div>
+              <div class="footer-slogan">Securing The Digital Future</div>
+            </div>
+          </div>
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#lab">Lab</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/lace_nx__ch" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            </a>
+            <a href="https://www.facebook.com/ahcen.305505" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@lace_nx___ch" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-copy">© 2026 Cyber Luffy. All Rights Reserved.</div>
+          <div class="footer-status">
+            <span class="status-dot"></span>
+            <span>ALL SYSTEMS OPERATIONAL</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+  </div><!-- /site -->
+
+  <script src="script.js"></script>
+</body>
+</html>
